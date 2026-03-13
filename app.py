@@ -9,11 +9,14 @@ df["date"] = pd.to_datetime(df["date"])
 
 # Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
-    
-    html.H1("Soul Foods Pink Morsel Sales Visualiser",
-            style={"textAlign": "center", "color": "#2c3e50"}),
+
+    html.H1(
+        "Soul Foods Pink Morsel Sales Visualiser",
+        style={"textAlign": "center", "color": "#2c3e50"}
+    ),
 
     html.Div([
         dcc.RadioItems(
